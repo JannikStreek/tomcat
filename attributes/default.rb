@@ -126,8 +126,8 @@ when 'suse'
   default['tomcat']['keytool'] = 'keytool'
   default['tomcat']['lib_dir'] = "#{node['tomcat']['home']}/lib"
   default['tomcat']['endorsed_dir'] = "#{node['tomcat']['lib_dir']}/endorsed"
-  default['tomcat']['packages'] = ['tomcat']
-  default['tomcat']['deploy_manager_packages'] = ['tomcat-admin-webapps']
+  default['tomcat']['packages'] = 'tomcat'
+  default['tomcat']['deploy_manager_packages'] = 'tomcat-admin-webapps'
 else
   default['tomcat']['user'] = "tomcat#{node['tomcat']['base_version']}"
   default['tomcat']['group'] = "tomcat#{node['tomcat']['base_version']}"
